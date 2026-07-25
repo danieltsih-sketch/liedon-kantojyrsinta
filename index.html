@@ -3,332 +3,208 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Liedon Kantojyrsintä | Kannot pois nopeasti ja siististi</title>
+  <title>Liedon Kantojyrsintä | Kantojyrsintää Liedossa ja Turun seudulla</title>
   <meta name="description" content="Kantojyrsintää Liedossa, Turussa, Kaarinassa, Raisiossa ja lähialueilla. Lähetä kuva kannosta WhatsAppilla ja saat nopean hinta-arvion.">
-  <meta name="theme-color" content="#173d24">
+  <meta name="theme-color" content="#113a24">
   <meta property="og:title" content="Liedon Kantojyrsintä">
-  <meta property="og:description" content="Kannot pois nopeasti ja siististi Liedossa ja lähialueilla.">
+  <meta property="og:description" content="Kannot pois nopeasti ja siististi.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-row">
-    <a class="brand" href="#alku">
-      <span class="brand-main">Liedon Kantojyrsintä</span>
-      <span class="brand-sub">Kannot pois nopeasti ja siististi</span>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="mini-brand" href="#alku">
+      <span>Liedon</span> Kantojyrsintä
     </a>
-
-    <nav class="desktop-nav" aria-label="Päävalikko">
-      <a href="#palvelut">Palvelut</a>
+    <button class="menu-button" type="button" aria-label="Avaa valikko" onclick="document.body.classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="menu">
       <a href="#hinnasto">Hinnasto</a>
-      <a href="#kuvat">Työn jälki</a>
-      <a href="#alue">Toiminta-alue</a>
+      <a href="#palvelut">Palvelut</a>
+      <a href="#kalusto">Kalusto</a>
       <a href="#yhteys">Yhteys</a>
     </nav>
-
-    <a class="header-phone" href="tel:+358413105856">041 310 5856</a>
   </div>
 </header>
 
 <main id="alku">
   <section class="hero">
-    <div class="container hero-grid">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
       <div class="hero-copy">
-        <div class="eyebrow">Paikallinen kantojyrsintäpalvelu</div>
-        <h1>Kannot pois nopeasti ja siististi</h1>
-        <p class="hero-lead">Palvelemme Liedossa, Turussa, Kaarinassa, Raisiossa ja lähialueilla. Saat nopean hinta-arvion lähettämällä kuvan kannosta WhatsAppilla.</p>
+        <span class="location">LIETO • TURKU • KAARINA • RAISIO</span>
+        <h1>Kantojyrsintää ammattitaidolla</h1>
+        <p>Nopea ja siisti kannon poisto pihoilta ja tonteilta ilman raskaita kaivuutöitä.</p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" target="_blank" rel="noopener"
+        <div class="hero-buttons">
+          <a class="action action-dark" href="tel:+358413105856">☎ Soita nyt</a>
+          <a class="action action-dark" target="_blank" rel="noopener"
              href="https://wa.me/358413105856?text=Hei%20Liedon%20Kantojyrsint%C3%A4!%20Haluaisin%20hinta-arvion%20kannosta.">
-             Lähetä kuva WhatsAppilla
+             WhatsApp
           </a>
-          <a class="btn btn-outline" href="tel:+358413105856">Soita 041 310 5856</a>
-        </div>
-
-        <div class="trust-list">
-          <span>✓ Nopea vastaus</span>
-          <span>✓ Selkeä hinta etukäteen</span>
-          <span>✓ Siisti lopputulos</span>
+          <a class="action action-gold" href="#yhteys">Pyydä tarjous</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <img src="logo.png" alt="Liedon Kantojyrsintä – kannot pois nopeasti ja siististi">
-        <div class="hero-card-note">Lähetä kuva kannosta, ympäristöstä ja mahdollisista pintajuurista.</div>
+      <div class="hero-logo-wrap">
+        <img src="logo.png" alt="Liedon Kantojyrsintä">
       </div>
     </div>
   </section>
 
-  <section class="quick-strip">
-    <div class="container quick-grid">
-      <div>
-        <strong>1.</strong>
-        <span>Ota kuva kannosta</span>
-      </div>
-      <div>
-        <strong>2.</strong>
-        <span>Lähetä WhatsAppilla</span>
-      </div>
-      <div>
-        <strong>3.</strong>
-        <span>Saat hinta-arvion nopeasti</span>
-      </div>
+  <section class="usp-band">
+    <div class="container usp-grid">
+      <div><strong>Nopea tarjous</strong><span>Kuvan perusteella</span></div>
+      <div><strong>Siisti lopputulos</strong><span>Piha jää hyväksi</span></div>
+      <div><strong>Reilu hinnoittelu</strong><span>Sovitaan etukäteen</span></div>
     </div>
   </section>
 
-  <section id="palvelut" class="section">
+  <section id="hinnasto" class="section dark-section">
     <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow dark">Palvelut</div>
-        <h2>Kantojyrsintää erilaisiin pihoihin ja kohteisiin</h2>
-        <p>Palvelu sopii omakotitaloille, mökeille, taloyhtiöille ja yrityksille.</p>
+      <div class="section-title light">
+        <span>HINNASTO</span>
+        <h2>Selkeä hinnoittelu</h2>
       </div>
 
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="icon">🌳</div>
-          <h3>Kantojen jyrsintä</h3>
-          <p>Kannot jyrsitään maanpinnan alapuolelle asiakkaan tarpeen mukaan.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon">🪵</div>
-          <h3>Pintajuurien jyrsintä</h3>
-          <p>Laajat pintajuuret ja juuriston loivennus voidaan tehdä lisätyönä.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon">🏡</div>
-          <h3>Useampi kanto</h3>
-          <p>Useampi kanto samalla käynnillä edullisemmalla kappalehinnalla.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon">🤝</div>
-          <h3>Yritykset ja taloyhtiöt</h3>
-          <p>Myös alihankintatyöt puunkaatoyrityksille ja suuremmat piha-alueet.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="hinnasto" class="section pricing-section">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow dark">Hinnasto</div>
-        <h2>Selkeä hintahaarukka</h2>
-        <p>Lopullinen hinta riippuu kannon koosta, määrästä, pintajuurista, kivisyydestä ja kohteen saavutettavuudesta.</p>
-      </div>
-
-      <div class="price-grid">
-        <article class="price-card">
-          <span class="price-label">Pieni kanto</span>
+      <div class="pricing-cards">
+        <article>
+          <small>Pieni kanto</small>
           <h3>20–30 cm</h3>
-          <div class="price">50–70 €</div>
+          <strong>50–80 €</strong>
         </article>
-
-        <article class="price-card featured">
-          <span class="badge">Yleisin</span>
-          <span class="price-label">Keskikokoinen</span>
+        <article>
+          <small>Keskikokoinen kanto</small>
           <h3>30–60 cm</h3>
-          <div class="price">70–140 €</div>
+          <strong>80–150 €</strong>
         </article>
-
-        <article class="price-card">
-          <span class="price-label">Iso kanto</span>
+        <article>
+          <small>Iso kanto</small>
           <h3>60–100 cm</h3>
-          <div class="price">140–280 €</div>
-        </article>
-
-        <article class="price-card">
-          <span class="price-label">Erittäin suuri</span>
-          <h3>Yli 100 cm</h3>
-          <div class="price small">Tarjouksen mukaan</div>
+          <strong>150–300 €</strong>
         </article>
       </div>
 
-      <div class="pricing-notes">
-        <div><strong>Minimiveloitus</strong><span>100 €</span></div>
-        <div><strong>Pintajuurien jyrsintä</strong><span>alk. 20 €</span></div>
-        <div><strong>Useampi kanto</strong><span>edullisempi kappalehinta</span></div>
-      </div>
-
-      <p class="fineprint">Lopullinen hinta sovitaan aina ennen työn aloittamista. Näin asiakkaalle ei tule yllätyksiä.</p>
-      <div class="multi-stump-note">Useampi kanto samalla käynnillä = edullisempi kappalehinta.</div>
-    </div>
-  </section>
-
-  <section id="kuvat" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow dark">Työn jälki</div>
-        <h2>Ennen ja jälkeen</h2>
-        <p>Tähän lisätään omat työkuvat ensimmäisten kohteiden jälkeen.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="gallery-card">
-          <div class="gallery-placeholder before">ENNEN</div>
-          <figcaption>Esimerkki: näkyvä kanto ja pintajuuret pihassa.</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <div class="gallery-placeholder after">JÄLKEEN</div>
-          <figcaption>Esimerkki: jyrsitty ja siistitty alue.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="alue" class="section area-section">
-    <div class="container area-grid">
-      <div>
-        <div class="eyebrow">Toiminta-alue</div>
-        <h2>Lieto ja koko Turun seutu</h2>
-        <p>Palvelemme Liedossa, Turussa, Kaarinassa, Raisiossa, Aurassa, Paimiossa ja muilla lähialueilla sopimuksen mukaan.</p>
-        <ul class="area-list">
-          <li>Lieto</li>
-          <li>Turku</li>
-          <li>Kaarina</li>
-          <li>Raisio</li>
-          <li>Aura</li>
-          <li>Paimio</li>
-        </ul>
-      </div>
-
-      <div class="map-card">
-        <iframe
-          title="Liedon Kantojyrsinnän toiminta-alue"
-          src="https://www.google.com/maps?q=Lieto%2C%20Finland&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section reviews-section">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow dark">Asiakaspalautteet</div>
-        <h2>Luotettavaa paikallista palvelua</h2>
-        <p>Ensimmäiset oikeat Google-arvostelut lisätään tähän töiden valmistuttua.</p>
-      </div>
-      <div class="review-grid">
-        <article class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>“Nopea yhteydenotto ja selkeä hinta-arvio.”</p>
-          <strong>Esimerkkipalaute</strong>
-        </article>
-        <article class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>“Työ tehtiin sovitusti ja piha jäi siistiksi.”</p>
-          <strong>Esimerkkipalaute</strong>
-        </article>
-        <article class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>“Helppo tarjous WhatsApp-kuvien perusteella.”</p>
-          <strong>Esimerkkipalaute</strong>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section faq-section">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow dark">Usein kysyttyä</div>
-        <h2>Mitä asiakkaan kannattaa tietää?</h2>
-      </div>
-
-      <div class="faq-grid">
-        <details open>
-          <summary>Miten saan hinta-arvion?</summary>
-          <p>Lähetä WhatsAppilla kuva kannosta, ympäristöstä ja mahdollisista pintajuurista. Kerro myös paikkakunta.</p>
-        </details>
-        <details>
-          <summary>Kuinka syvälle kanto jyrsitään?</summary>
-          <p>Normaalisti maanpinnan alapuolelle. Tarvittava syvyys sovitaan asiakkaan käyttötarkoituksen mukaan.</p>
-        </details>
-        <details>
-          <summary>Vaikuttavatko pintajuuret hintaan?</summary>
-          <p>Kyllä. Laajat pintajuuret ja loivennus lisäävät työmäärää ja hinnoitellaan erikseen.</p>
-        </details>
-        <details>
-          <summary>Onko useampi kanto halvempi?</summary>
-          <p>Kyllä. Samalla käynnillä tehtävät lisäkannot hinnoitellaan yleensä edullisemmin.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="yhteys" class="section contact-section">
-    <div class="container contact-grid">
-      <div class="contact-copy">
-        <div class="eyebrow">Pyydä tarjous</div>
-        <h2>Lähetä kuva kannosta</h2>
-        <p>Nopeimman vastauksen saat WhatsAppilla. Voit myös soittaa tai käyttää lomaketta.</p>
-
-        <div class="contact-boxes">
-          <a href="tel:+358413105856">
-            <span>Puhelin</span>
-            <strong>041 310 5856</strong>
-          </a>
-          <a target="_blank" rel="noopener" href="https://wa.me/358413105856">
-            <span>WhatsApp</span>
-            <strong>Lähetä viesti</strong>
-          </a>
-          <div>
-            <span>Verkkosivu</span>
-            <strong>liedonkantojyrsinta.fi</strong>
-          </div>
+      <div class="pricing-highlight">
+        <div>
+          <strong>Useampi kanto samassa paikassa</strong>
+          <span>Edullisempi kappalehinta</span>
+        </div>
+        <div>
+          <strong>Minimiveloitus</strong>
+          <span>100 €</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <form class="contact-form" name="tarjouspyynto" method="POST" data-netlify="true">
+  <section class="section fast-offer" id="yhteys">
+    <div class="container offer-grid">
+      <div class="offer-copy">
+        <div class="lightning">⚡</div>
+        <h2>Nopea tarjous</h2>
+        <p>Lähetä meille:</p>
+        <ul>
+          <li>Kuva kannosta</li>
+          <li>Kantojen määrä</li>
+          <li>Osoite tai paikkakunta</li>
+        </ul>
+        <strong class="quick-note">Saat hinnan nopeasti!</strong>
+      </div>
+
+      <form name="tarjouspyynto" method="POST" data-netlify="true" enctype="multipart/form-data">
         <input type="hidden" name="form-name" value="tarjouspyynto">
-        <label>Nimi
-          <input type="text" name="nimi" required>
+        <input type="text" name="nimi" placeholder="Nimi" required>
+        <input type="tel" name="puhelin" placeholder="Puhelinnumero" required>
+        <input type="email" name="sahkoposti" placeholder="Sähköposti">
+        <input type="text" name="osoite" placeholder="Osoite / paikkakunta">
+        <textarea name="viesti" rows="5" placeholder="Viesti"></textarea>
+        <label class="file-label">Lisää kuva
+          <input type="file" name="kuva" accept="image/*">
         </label>
-        <label>Puhelinnumero
-          <input type="tel" name="puhelin" required>
-        </label>
-        <label>Sähköposti
-          <input type="email" name="sahkoposti">
-        </label>
-        <label>Paikkakunta / osoite
-          <input type="text" name="osoite">
-        </label>
-        <label>Viesti
-          <textarea name="viesti" rows="5" placeholder="Kannon koko, määrä, pintajuuret ja kulkureitti"></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Lähetä tarjouspyyntö</button>
+        <button type="submit">Lähetä tarjouspyyntö</button>
       </form>
+    </div>
+  </section>
+
+  <section id="palvelut" class="section benefits">
+    <div class="container">
+      <div class="section-title center">
+        <span>MIKSI VALITA MEIDÄT?</span>
+        <h2>Helppo ja siisti tapa poistaa kannot</h2>
+      </div>
+
+      <div class="benefit-grid">
+        <article><div class="check">✓</div><h3>Ei raskaita kaivinkoneita</h3><p>Kantojyrsintä säästää pihaa ja vähentää turhaa kaivamista.</p></article>
+        <article><div class="check">✓</div><h3>Piha pysyy siistinä</h3><p>Työ tehdään hallitusti ja lopputulos viimeistellään.</p></article>
+        <article><div class="check">✓</div><h3>Nopea palvelu</h3><p>Tarjous kuvien perusteella ja työ nopeasti sovittuna ajankohtana.</p></article>
+        <article><div class="check">✓</div><h3>Selkeä hinta</h3><p>Hinta sovitaan aina ennen työn aloittamista.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kalusto" class="section equipment">
+    <div class="container equipment-grid">
+      <div>
+        <span class="gold-label">KALUSTO</span>
+        <h2>Tehokas kone myös ahtaisiin kohteisiin</h2>
+        <p>Työ tehdään laadukkaalla kantojyrsimellä, joka soveltuu omakotitalojen pihoihin, mökeille, taloyhtiöille ja yrityksille.</p>
+        <div class="equipment-points">
+          <span>✓ Kapea kulkureitti</span>
+          <span>✓ Tehokas jyrsintä</span>
+          <span>✓ Siisti työnjälki</span>
+        </div>
+      </div>
+      <div class="equipment-visual">
+        <img src="logo.png" alt="Liedon Kantojyrsintä - kalusto">
+      </div>
+    </div>
+  </section>
+
+  <section class="section order">
+    <div class="container">
+      <div class="section-title center light">
+        <span>NÄIN TILAAT TYÖN</span>
+        <h2>Kolme helppoa vaihetta</h2>
+      </div>
+      <div class="order-grid">
+        <article><div>1</div><h3>Ota yhteyttä</h3><p>Soita, lähetä WhatsApp tai jätä lomake.</p></article>
+        <article><div>2</div><h3>Saat hinnan</h3><p>Arvio tehdään kuvien ja tietojen perusteella.</p></article>
+        <article><div>3</div><h3>Työ tehdään</h3><p>Sovitaan aika ja hoidetaan homma siististi.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container">
+      <h2>Tarvitsetko kantojyrsintää?</h2>
+      <p>Ota yhteyttä – vastaan nopeasti.</p>
+      <div class="hero-buttons center-buttons">
+        <a class="action action-dark" href="tel:+358413105856">☎ Soita nyt</a>
+        <a class="action action-dark" target="_blank" rel="noopener"
+           href="https://wa.me/358413105856?text=Hei%20Liedon%20Kantojyrsint%C3%A4!%20Haluaisin%20hinta-arvion%20kannosta.">WhatsApp</a>
+      </div>
     </div>
   </section>
 </main>
 
 <a class="floating-whatsapp" target="_blank" rel="noopener"
-   href="https://wa.me/358413105856?text=Hei%20Liedon%20Kantojyrsint%C3%A4!%20Haluaisin%20hinta-arvion%20kannosta.">
-   WA
-</a>
+href="https://wa.me/358413105856?text=Hei%20Liedon%20Kantojyrsint%C3%A4!%20Haluaisin%20hinta-arvion%20kannosta."
+aria-label="WhatsApp">WA</a>
 
 <footer>
   <div class="container footer-grid">
-    <div>
-      <strong>Liedon Kantojyrsintä</strong>
-      <p>Kannot pois nopeasti ja siististi.</p>
-    </div>
-    <div>
-      <strong>Yhteys</strong>
-      <p>041 310 5856<br>liedonkantojyrsinta.fi</p>
-    </div>
-    <div>
-      <strong>Toiminta-alue</strong>
-      <p>Lieto, Turku, Kaarina, Raisio ja lähialueet</p>
-    </div>
+    <div><strong>Liedon Kantojyrsintä</strong><span>Kannot pois nopeasti ja siististi</span></div>
+    <div><a href="tel:+358413105856">041 310 5856</a><span>liedonkantojyrsinta.fi</span></div>
+    <div><span>Lieto • Turku • Kaarina • Raisio</span></div>
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menu-open')));
+</script>
 </body>
 </html>
