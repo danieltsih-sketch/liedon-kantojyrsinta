@@ -28,3 +28,56 @@
   .review-grid{grid-template-columns:1fr}
   .floating-whatsapp{left:auto;right:14px;bottom:14px;width:56px;height:56px}
 }
+
+
+/* Version 8: transparent logo and cleaner hero */
+.hero-card{
+  background:transparent;
+  box-shadow:none;
+  padding:0;
+  border-radius:0;
+}
+.hero-card img{
+  width:100%;
+  max-width:520px;
+  max-height:520px;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 25px rgba(0,0,0,.28));
+}
+.hero-card-note{
+  margin:14px auto 0;
+  max-width:520px;
+  color:#fff;
+  background:rgba(0,0,0,.16);
+  border:1px solid rgba(255,255,255,.14);
+  padding:12px 16px;
+  border-radius:14px;
+  text-align:center;
+}
+.multi-stump-note{
+  margin-top:16px;
+  padding:16px 18px;
+  border-radius:14px;
+  background:#173d24;
+  color:#fff;
+  font-weight:900;
+  text-align:center;
+}
+.floating-whatsapp{
+  font-size:24px;
+  background:#25d366;
+}
+@media(max-width:640px){
+  .hero-card{
+    max-width:100%;
+    margin:0 auto 10px;
+  }
+  .hero-card img{
+    max-width:420px;
+    max-height:none;
+  }
+  .hero-card-note{
+    font-size:13px;
+    padding:10px 12px;
+  }
+}
