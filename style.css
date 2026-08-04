@@ -2,12 +2,22 @@
 /* v12 premium refinements */
 .hero-grid{min-height:600px}
 .hero h1{max-width:760px}
-.hero-image-frame{position:relative;min-height:470px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,rgba(242,140,40,.14),rgba(242,140,40,0) 40%),radial-gradient(circle at 70% 25%,#343434 0,#242424 42%,#171717 100%);box-shadow:0 28px 60px rgba(0,0,0,.34)}
-.hero-image-label{position:absolute;top:20px;left:20px;padding:8px 12px;border-radius:999px;background:#f28c28;color:#171717;font-size:11px;font-weight:900;letter-spacing:.1em}
-.hero-image-content{position:absolute;inset:auto 28px 28px}
-.hero-image-content span,.hero-image-content small{display:block}
-.hero-image-content span{font-size:34px;font-weight:900}
-.hero-image-content small{margin-top:10px;color:#aaa;max-width:430px}
+.hero-service-card{position:relative;min-height:500px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.11);background:linear-gradient(145deg,rgba(242,140,40,.1),transparent 38%),linear-gradient(160deg,#292929,#181818 70%);box-shadow:0 28px 60px rgba(0,0,0,.34);padding:30px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.hero-service-card:before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 58%,rgba(242,140,40,.08));pointer-events:none;z-index:-1}
+.hero-service-card:after{content:"";position:absolute;top:0;left:0;width:6px;height:100%;background:#f28c28}
+.service-card-topline{position:absolute;top:28px;left:30px;right:30px;display:flex;justify-content:space-between;gap:20px;color:#a9a9a9;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.stump-rings{position:absolute;top:70px;right:-52px;width:245px;height:245px;border:1px solid rgba(242,140,40,.28);border-radius:47% 53% 45% 55%;transform:rotate(-12deg);z-index:-1}
+.stump-rings span{position:absolute;border:1px solid rgba(242,140,40,.2);border-radius:inherit}
+.stump-rings span:nth-child(1){inset:26px 30px}
+.stump-rings span:nth-child(2){inset:57px 62px}
+.stump-rings span:nth-child(3){inset:91px 94px;background:#f28c28;border:0;opacity:.8}
+.service-card-copy{max-width:500px}
+.service-card-copy h2{font-size:clamp(32px,3.7vw,48px);line-height:1.02;letter-spacing:-.04em;margin:12px 0 18px}
+.service-card-copy p{color:#c0c0c0;font-size:16px;line-height:1.65;margin:0}
+.service-card-points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:28px -30px -30px;background:rgba(255,255,255,.08);border-top:1px solid rgba(255,255,255,.08)}
+.service-card-points div{min-height:92px;padding:18px 15px;background:#1b1b1b;display:flex;flex-direction:column;justify-content:center}
+.service-card-points span{color:#f28c28;font-size:11px;font-weight:900;letter-spacing:.12em}
+.service-card-points strong{font-size:13px;line-height:1.35;margin-top:6px}
 .before-after-premium{position:relative;min-height:420px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#202020;box-shadow:0 18px 44px rgba(0,0,0,.22)}
 .before-panel,.after-panel{position:absolute;inset:0;display:flex;align-items:flex-end;padding:28px}
 .before-panel{right:50%;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.62)),linear-gradient(135deg,#5e4b39,#2c241e)}
@@ -28,8 +38,14 @@
 .floating-whatsapp svg{width:29px;height:29px;fill:#fff}
 @media(max-width:640px){
 .hero h1{font-size:clamp(44px,12vw,58px)}
-.hero-image-frame{min-height:300px}
-.hero-image-content span{font-size:28px}
+.hero-service-card{min-height:520px;padding:24px}
+.service-card-topline{top:22px;left:24px;right:24px}
+.stump-rings{width:185px;height:185px;top:68px;right:-58px}
+.service-card-copy h2{font-size:clamp(30px,9vw,40px)}
+.service-card-copy p{font-size:15px}
+.service-card-points{grid-template-columns:1fr;margin:24px -24px -24px}
+.service-card-points div{min-height:auto;padding:13px 20px;flex-direction:row;align-items:center;gap:12px}
+.service-card-points strong{margin-top:0}
 .before-after-premium{min-height:300px}
 .before-panel span,.after-panel span{font-size:16px}
 .equipment-visual{min-height:290px}
