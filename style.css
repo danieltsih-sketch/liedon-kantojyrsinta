@@ -87,9 +87,10 @@ summary {
 }
 
 .brand img {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, .35));
 }
 
 .brand span,
@@ -858,8 +859,8 @@ footer {
   }
 
   .brand img {
-    width: 46px;
-    height: 46px;
+    width: 54px;
+    height: auto;
   }
 
   .menu-open .nav {
