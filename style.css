@@ -61,6 +61,22 @@ summary {
   margin: auto;
 }
 
+.announcement-bar {
+  position: relative;
+  z-index: 60;
+  padding: 8px 0;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .01em;
+  text-align: center;
+}
+
+.announcement-bar span {
+  margin: 0 5px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -218,6 +234,10 @@ summary {
   max-width: 680px;
   color: #d0d0d0;
   font-size: 20px;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .hero-actions {
@@ -401,6 +421,138 @@ summary {
   line-height: 1.35;
 }
 
+.campaign-section {
+  position: relative;
+  margin-top: 26px;
+  padding: 4px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--orange);
+  color: var(--black);
+}
+
+.campaign-section::before {
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  background-image: radial-gradient(#151515 1px, transparent 1px);
+  background-size: 18px 18px;
+  content: "";
+}
+
+.campaign-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 22px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 20px;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .24);
+}
+
+.campaign-offer {
+  padding-right: 22px;
+  border-right: 1px solid rgba(255, 255, 255, .15);
+}
+
+.campaign-kicker {
+  color: var(--orange);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.campaign-offer h2 {
+  margin: 8px 0 6px;
+  color: var(--orange);
+  font-size: clamp(38px, 4.2vw, 52px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+.campaign-offer h2 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--white);
+  font-size: clamp(20px, 2.1vw, 27px);
+  letter-spacing: -.03em;
+}
+
+.campaign-offer p {
+  margin: 14px 0 0;
+  color: #d1d1d1;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.campaign-details ul {
+  display: grid;
+  gap: 11px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.campaign-details li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  align-items: start;
+  color: #e5e5e5;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.campaign-details li span {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.campaign-cta {
+  min-height: 46px;
+  min-width: 190px;
+  padding: 12px 18px;
+}
+
+.campaign-trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.campaign-trust div {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 8px;
+  align-items: start;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
+
+.campaign-trust span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.campaign-trust strong {
+  color: #d3d3d3;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .section {
   padding: 84px 0;
   scroll-margin-top: 76px;
@@ -509,6 +661,12 @@ summary {
   color: #565656;
 }
 
+.pricing-facts small {
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .minimum-note {
   padding: 16px 0 0;
   color: #444;
@@ -562,6 +720,28 @@ summary {
 .price-row b {
   font-size: 24px;
   text-align: right;
+}
+
+.price-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price-value b {
+  color: #9b4e06;
+}
+
+.price-value span {
+  color: #6a6a6a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pricing-note {
+  margin: 18px 4px 0;
+  color: #4c4c4c;
+  font-size: 15px;
 }
 
 .order-section {
@@ -805,6 +985,25 @@ footer {
   color: #aaa;
 }
 
+.footer-contact,
+.footer-socials {
+  gap: 5px;
+}
+
+.footer-socials span {
+  color: #fff;
+  font-weight: 900;
+}
+
+.footer-service-area {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  color: #aaa;
+  font-size: 14px;
+}
+
 @media (max-width: 960px) {
   .nav {
     display: none;
@@ -831,6 +1030,7 @@ footer {
   }
 
   .hero-grid,
+  .campaign-card,
   .pricing-layout,
   .faq-layout,
   .area-grid,
@@ -843,6 +1043,16 @@ footer {
     padding: 48px 0;
   }
 
+  .campaign-card {
+    gap: 28px;
+  }
+
+  .campaign-offer {
+    padding: 0 0 28px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -850,6 +1060,16 @@ footer {
 }
 
 @media (max-width: 640px) {
+  .announcement-bar {
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .announcement-bar span {
+    display: none;
+  }
+
   .header-inner {
     height: 68px;
   }
@@ -870,6 +1090,59 @@ footer {
   .hero-grid {
     min-height: auto;
     padding: 30px 0 40px;
+  }
+
+  .campaign-section {
+    margin-top: 22px;
+    padding: 4px;
+  }
+
+  .campaign-card {
+    gap: 22px;
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .campaign-offer {
+    padding-bottom: 22px;
+  }
+
+  .campaign-kicker {
+    font-size: 16px;
+  }
+
+  .campaign-offer h2 {
+    font-size: clamp(40px, 13vw, 54px);
+  }
+
+  .campaign-offer h2 span {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+
+  .campaign-offer p {
+    margin-top: 14px;
+  }
+
+  .campaign-details li {
+    font-size: 14px;
+  }
+
+  .campaign-cta {
+    width: 100%;
+  }
+
+  .campaign-trust {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .campaign-trust div {
+    grid-template-columns: 26px 1fr;
+    padding: 10px 0;
+  }
+
+  .campaign-trust strong {
+    font-size: 13px;
   }
 
   .hero h1 {
@@ -959,6 +1232,10 @@ footer {
 
   .price-row b {
     font-size: 21px;
+  }
+
+  .price-value {
+    align-items: flex-start;
   }
 
   .pricing-facts div,
