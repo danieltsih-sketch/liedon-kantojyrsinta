@@ -240,6 +240,26 @@ summary {
   min-width: 0;
 }
 
+.hero-stump-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .28);
+}
+
+.hero-copy > .hero-stump-caption {
+  max-width: none;
+  margin: 8px 0 0;
+  color: #d0d0d0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  opacity: .78;
+}
+
 .hero-actions {
   display: flex;
   gap: 12px;
@@ -1153,6 +1173,12 @@ footer {
 
   .hero-copy > p {
     font-size: 17px;
+  }
+
+  .hero-stump-image {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .24);
   }
 
   .hero-actions,
