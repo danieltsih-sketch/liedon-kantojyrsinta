@@ -532,47 +532,6 @@ summary {
   font-weight: 900;
 }
 
-.campaign-cta {
-  min-height: 46px;
-  min-width: 190px;
-  padding: 12px 18px;
-}
-
-.campaign-trust {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.campaign-trust div {
-  display: grid;
-  grid-template-columns: 26px 1fr;
-  gap: 8px;
-  align-items: start;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, .16);
-}
-
-.campaign-trust span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--orange);
-  color: var(--black);
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.campaign-trust strong {
-  color: #d3d3d3;
-  font-size: 12px;
-  line-height: 1.35;
-}
-
 .section {
   padding: 84px 0;
   scroll-margin-top: 76px;
@@ -638,8 +597,7 @@ summary {
   font-size: 22px;
 }
 
-.services-grid p,
-.order-grid p {
+.services-grid p {
   color: #b8b8b8;
 }
 
@@ -762,41 +720,6 @@ summary {
   margin: 18px 4px 0;
   color: #4c4c4c;
   font-size: 15px;
-}
-
-.order-section {
-  background: var(--black-soft);
-}
-
-.order-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.order-grid article {
-  padding: 28px;
-  border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: 20px;
-  background: #171717;
-}
-
-.order-grid article > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--orange);
-  color: #171717;
-  font-size: 22px;
-  font-weight: 900;
-}
-
-.order-grid h3 {
-  margin: 24px 0 10px;
-  font-size: 24px;
 }
 
 .faq-section {
@@ -1147,24 +1070,6 @@ footer {
     font-size: 14px;
   }
 
-  .campaign-cta {
-    width: 100%;
-  }
-
-  .campaign-trust {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-
-  .campaign-trust div {
-    grid-template-columns: 26px 1fr;
-    padding: 10px 0;
-  }
-
-  .campaign-trust strong {
-    font-size: 13px;
-  }
-
   .hero h1 {
     font-size: clamp(38px, 10.5vw, 50px);
     line-height: 1.08;
@@ -1193,7 +1098,6 @@ footer {
 
   .trust-grid,
   .services-grid,
-  .order-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
