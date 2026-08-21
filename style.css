@@ -410,37 +410,6 @@ summary {
   line-height: 1.65;
 }
 
-.service-card-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin: 28px -30px -30px;
-  border-top: 1px solid rgba(255, 255, 255, .08);
-  background: rgba(255, 255, 255, .08);
-}
-
-.service-card-points div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 92px;
-  padding: 18px 15px;
-  background: #1b1b1b;
-}
-
-.service-card-points span {
-  color: var(--orange);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .12em;
-}
-
-.service-card-points strong {
-  margin-top: 6px;
-  font-size: 13px;
-  line-height: 1.35;
-}
-
 .campaign-section {
   position: relative;
   margin-top: 26px;
@@ -1121,23 +1090,6 @@ footer {
 
   .service-card-copy p {
     font-size: 15px;
-  }
-
-  .service-card-points {
-    grid-template-columns: 1fr;
-    margin: 22px -24px -24px;
-  }
-
-  .service-card-points div {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    min-height: auto;
-    padding: 13px 20px;
-  }
-
-  .service-card-points strong {
-    margin-top: 0;
   }
 
   .section {
