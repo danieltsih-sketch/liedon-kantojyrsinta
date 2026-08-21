@@ -24,6 +24,12 @@ body {
   line-height: 1.6;
 }
 
+main {
+  background-color: var(--black);
+  background-image: radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
 a,
 button,
 input,
@@ -501,6 +507,22 @@ summary {
   font-weight: 900;
 }
 
+.campaign-price-link {
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 18px;
+}
+
+.campaign-price-link span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform .18s ease;
+}
+
+.campaign-price-link:hover span {
+  transform: translateY(3px);
+}
+
 .section {
   padding: 84px 0;
   scroll-margin-top: 76px;
@@ -521,6 +543,170 @@ summary {
 .section-heading p {
   color: #b8b8b8;
   font-size: 18px;
+}
+
+.results-section {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.results-heading {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+.results-heading h2 {
+  margin-bottom: 10px;
+}
+
+.results-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.carousel-controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.carousel-button {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  place-items: center;
+  transition: color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.carousel-button:hover {
+  background: var(--orange);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.carousel-button:disabled {
+  cursor: default;
+  opacity: .38;
+}
+
+.carousel-button:disabled:hover {
+  background: transparent;
+  color: var(--white);
+  transform: none;
+}
+
+.carousel-button svg {
+  width: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+}
+
+.carousel-status {
+  min-width: 48px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-align: center;
+}
+
+.results-carousel {
+  position: relative;
+  border-radius: 26px;
+}
+
+.results-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  touch-action: pan-x pan-y;
+}
+
+.results-track::-webkit-scrollbar {
+  display: none;
+}
+
+.result-pair {
+  display: grid;
+  flex: 0 0 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 26px;
+  background: #111;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .28);
+  scroll-snap-align: start;
+}
+
+.result-pair figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.result-image-wrap {
+  position: relative;
+  height: clamp(360px, 52vw, 650px);
+  overflow: hidden;
+  border-radius: 19px;
+  background: #292724;
+}
+
+.result-image-wrap::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .32), transparent 28%);
+  content: "";
+  pointer-events: none;
+}
+
+.result-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-label {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  left: 18px;
+  padding: 8px 13px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  background: rgba(21, 21, 21, .88);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.result-label-after {
+  background: var(--orange);
+  color: var(--black);
 }
 
 .services-grid {
@@ -571,8 +757,8 @@ summary {
 }
 
 .pricing-section {
-  background: var(--cream);
-  color: #171717;
+  background: transparent;
+  color: var(--white);
 }
 
 .pricing-layout {
@@ -587,13 +773,13 @@ summary {
 }
 
 .pricing-copy > p {
-  color: #545454;
+  color: var(--muted);
   font-size: 18px;
 }
 
 .pricing-facts {
   margin-top: 28px;
-  border-top: 1px solid #bdb5aa;
+  border-top: 1px solid rgba(255, 255, 255, .18);
 }
 
 .pricing-facts div {
@@ -601,22 +787,22 @@ summary {
   justify-content: space-between;
   gap: 20px;
   padding: 15px 0;
-  border-bottom: 1px solid #bdb5aa;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
 }
 
 .pricing-facts span {
-  color: #565656;
+  color: var(--muted);
 }
 
 .pricing-facts small {
-  color: #666;
+  color: #c7c7c7;
   font-size: 13px;
   font-weight: 700;
 }
 
 .minimum-note {
   padding: 16px 0 0;
-  color: #444;
+  color: var(--muted);
   font-size: 15px;
 }
 
@@ -626,6 +812,7 @@ summary {
   border-left: 5px solid var(--orange);
   border-radius: 12px;
   background: #fff8ec;
+  color: #171717;
 }
 
 .tax-deduction h3 {
@@ -644,6 +831,7 @@ summary {
   padding: 8px;
   border-radius: 20px;
   background: #fff;
+  color: #171717;
   box-shadow: 0 18px 44px rgba(0, 0, 0, .08);
 }
 
@@ -687,12 +875,12 @@ summary {
 
 .pricing-note {
   margin: 18px 4px 0;
-  color: #4c4c4c;
+  color: var(--muted);
   font-size: 15px;
 }
 
 .faq-section {
-  background: #171717;
+  background: transparent;
 }
 
 .faq-layout {
@@ -741,8 +929,8 @@ summary {
 }
 
 .area-section {
-  background: var(--orange);
-  color: #171717;
+  background: transparent;
+  color: var(--white);
 }
 
 .area-grid {
@@ -757,6 +945,7 @@ summary {
 }
 
 .area-section p {
+  color: var(--muted);
   font-size: 19px;
 }
 
@@ -768,7 +957,7 @@ summary {
 }
 
 .contact-section {
-  background: #0f0f0f;
+  background: transparent;
 }
 
 .contact-grid {
@@ -878,7 +1067,10 @@ summary {
 
 footer {
   padding: 30px 0;
-  background: var(--black-deep);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  background-color: var(--black);
+  background-image: radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .footer-grid {
@@ -967,6 +1159,10 @@ footer {
 
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-image-wrap {
+    height: clamp(350px, 62vw, 540px);
   }
 
 }
@@ -1101,6 +1297,37 @@ footer {
   .pricing-copy h2,
   .contact-grid h2 {
     font-size: clamp(32px, 9.5vw, 44px);
+  }
+
+  .results-heading {
+    display: grid;
+    gap: 20px;
+  }
+
+  .results-heading p {
+    font-size: 16px;
+  }
+
+  .carousel-controls {
+    justify-content: space-between;
+  }
+
+  .result-pair {
+    gap: 5px;
+    padding: 5px;
+    border-radius: 18px;
+  }
+
+  .result-image-wrap {
+    height: clamp(310px, 98vw, 450px);
+    border-radius: 14px;
+  }
+
+  .result-label {
+    top: 10px;
+    left: 10px;
+    padding: 6px 9px;
+    font-size: 11px;
   }
 
   .services-grid article:hover,
