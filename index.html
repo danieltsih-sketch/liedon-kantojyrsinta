@@ -403,6 +403,9 @@ form.addEventListener('submit', async event => {
     form.reset();
     formStatus.textContent = 'Kiitos yhteydenotosta! Tarjouspyyntösi on lähetetty. Vastaamme yleensä saman päivän aikana.';
     formStatus.className = 'form-status success';
+    if (typeof gtag === 'function') {
+    gtag('event', 'generate_lead');
+  }
   } catch (error) {
     formStatus.textContent = 'Lähetys ei onnistunut. Kokeile uudelleen tai ota yhteyttä puhelimitse tai sähköpostilla.';
     formStatus.className = 'form-status error';
