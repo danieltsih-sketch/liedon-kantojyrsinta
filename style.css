@@ -708,6 +708,115 @@ summary {
   color: var(--black);
 }
 
+.reviews-section {
+  position: relative;
+  padding-top: 34px;
+  overflow: hidden;
+}
+
+.reviews-section::before {
+  position: absolute;
+  top: 0;
+  right: max(16px, calc((100vw - 1160px) / 2));
+  left: max(16px, calc((100vw - 1160px) / 2));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242, 140, 40, .6), transparent);
+  content: "";
+}
+
+.reviews-heading {
+  margin-bottom: 32px;
+}
+
+.reviews-summary {
+  display: grid;
+  gap: 5px;
+  margin-top: 22px;
+}
+
+.reviews-summary-rating {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--white);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.reviews-summary-rating span {
+  color: var(--orange);
+  letter-spacing: .08em;
+}
+
+.reviews-summary-rating strong {
+  font-size: 18px;
+}
+
+.reviews-summary > span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.review-card {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(242, 140, 40, .1), transparent 38%), var(--black-soft);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, .22);
+  transition: border-color .22s ease, transform .22s ease;
+}
+
+.review-card:nth-child(even) {
+  margin-top: 26px;
+}
+
+.review-card:hover {
+  border-color: rgba(242, 140, 40, .48);
+  transform: translateY(-4px);
+}
+
+.review-stars {
+  color: var(--orange);
+  font-size: 21px;
+  letter-spacing: .12em;
+  line-height: 1;
+}
+
+.review-card h3 {
+  margin: 16px 0 9px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.review-card p {
+  margin: 0;
+  color: #d0d0d0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.reviews-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.reviews-action .btn {
+  min-height: 60px;
+  padding-inline: 30px;
+  box-shadow: 0 14px 34px rgba(242, 140, 40, .24);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1327,6 +1436,38 @@ footer {
     left: 10px;
     padding: 6px 9px;
     font-size: 11px;
+  }
+
+  .reviews-section {
+    padding-top: 24px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card,
+  .review-card:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .review-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .review-card:hover {
+    transform: none;
+  }
+
+  .reviews-action {
+    margin-top: 32px;
+  }
+
+  .reviews-action .btn {
+    width: 100%;
+    padding-inline: 16px;
+    text-align: center;
   }
 
   .services-grid article:hover,
